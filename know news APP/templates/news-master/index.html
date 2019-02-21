@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script src="/static/js/rem.js"></script>
+    <script src="/static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/index.js"></script>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_849483_js9vwjbic2h.css">
+
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.16rem;
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        border: none;
+    }
+    body{
+        overflow-x:hidden
+    }
+    .xxkBox{
+        width: 100%;
+        padding:0 .24rem;
+        box-sizing:border-box;
+        height: auto;
+        background:#fff;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 5;
+    }
+    nav ul li .select{
+        color:red;
+    }
+</style>
+<body>
+    <div class="bg">
+        <div class="meau">
+            <div class="top">
+                <i class="iconfont icon-cuohao1"></i>
+            </div>
+            <div class="tittle">我的频道 <span>点击进入我的频道</span>
+                <div class="right">编辑</div>
+            </div>
+            <ul class="lis">
+                {% for item in data2 %}
+                <li>{{item[1]}}</li>
+                {% endfor %}
+
+            </ul>
+            <div class="tittle">频道推荐 <span>点击进入我的频道</span></div>
+            <ul class="lis lis1">
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+                <li>
+                    <i class="iconfont icon-jiahao1"></i>体育
+                </li>
+            </ul>
+        </div>
+        <div class="search_yemian">
+            <div class="header1">
+                <div class="left">
+                    <i class="iconfont icon-fanhui"></i>
+                </div>
+                <div class="sBox">
+                    <i class="iconfont icon-sousu"></i>
+                    <input type="text" placeholder="赵丽颖微博">
+                </div>
+
+                <div class="right">搜索</div>
+            </div>
+            <ul class="nav1">
+                <li>孙冰</li>
+                <li>火龙果</li>
+                <li>丁香医生</li>
+            </ul>
+            <div class="word">搜你想搜的
+                <i class="iconfont icon-yincangdaan"></i>
+            </div>
+            <ul class="search_word">
+                <li>中秋佳节的图片</li>
+                <li>中秋晚会名单</li>
+                <li>小视频</li>
+                <li>最好看的电影</li>
+                <li>美人制造</li>
+                <li>吴美莲</li>
+                <li>中秋晚会名单</li>
+                <li>中秋晚会名单</li>
+                <li>中秋佳节的图片</li>
+                <li>中秋晚会名单</li>
+                <li>小视频</li>
+                <li>最好看的电影</li>
+                <li>美人制造</li>
+                <li>吴美莲</li>
+            </ul>
+        </div>
+        <header>
+            <i class="iconfont icon-sousu"></i>
+            <input type="text" placeholder="赵丽颖微博" id="search">
+            <div class="camerabox">
+                <i class="iconfont icon-xiangji1"></i>
+                发布
+            </div>
+            <div class="huiBox" >
+                <ul style="z-index:999">
+                    <li>
+                        <i class="iconfont icon-tuwenguanli"></i>
+                        发图文
+                    </li>
+                    <li>
+                        <i class="iconfont icon-iconfonthot"></i>
+                        拍小视频
+                    </li>
+                    <li>
+                        <i class="iconfont icon-shipin"></i>
+                        上传视频
+                    </li>
+                    <li>
+                        <i class="iconfont icon-tiwen"></i>
+                        提问
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav style="padding-right:0.7rem;border-bottim:.01rem solid #f3f3f3;box-sizing:border-box;">
+            <ul style="border-bottom:.01rem solid #f3f3f3;box-sizing:border-box;">
+                {% for item in data2%}
+                <li><a href="javascripts:;" style="width:.64rem;height:100%;display:block;color: black;font-size: .3rem;">{{item[1]}}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="iBox">
+                <i class="iconfont icon-caidan"></i>
+            </div>
+        </nav>
+        <main style="position:relative;">
+            <div class="xxkBox" style="z-index:10">
+                <ul>
+                {% for item in data1 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle" style="margin-bottom:.32rem">{{item[1]}}</div>
+                        <div class="picBox" >
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data1 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data8 %}
+                    {% if item[9]==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data3 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data4 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data5 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data6 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data7%}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data8 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data1 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data1 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+            <div class="xxkBox">
+                <ul>
+                {% for item in data1 %}
+                    {% if item[9]==0 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="newsli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==2 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="vodeoli">
+                    <div class="tittle">{{item[1]}}</div>
+                        {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <div class="bottom">
+                        <span>{{item[2]}}</span>
+                        <span>{{item[4]}}</span>
+                        <span>{{item[5]}}</span>
+                        <i class="iconfont icon-guanbi"></i>
+                    </div>
+                </li>
+                </a>
+                   {% elif item[9] >=3 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="picli">
+                        <div class="tittle">{{item[1]}}</div>
+                        <div class="picBox">
+                            {% for i in range(3)%}
+                            <div class="pic" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                            {% endfor %}
+                        </div>
+                        <div class="bottom">
+                            <span>{{item[2]}}</span>
+                            <span>{{item[4]}}评论</span>
+                            <span>{{item[5]}}</span>
+                            <i class="iconfont icon-guanbi"></i>
+                        </div>
+                    </li>
+                </a>
+                    {% elif item[9] ==1 %}
+                <a href="/xq{{item[0]}}">
+                    <li class="news_picli">
+                        <div class="left" style="overflow:hidden;">
+                            <div class="tittle">{{item[1]}}</div>
+                            <div class="bottom">
+                                <span>{{item[2]}}</span>
+                                <span>{{item[4]}}评论</span>
+                                <span style="overflow:hidden;">{{item[5]}}</span>
+                                <i class="iconfont icon-guanbi"></i>
+                            </div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </li>
+                </a>
+                    {% endif %}
+                 {% endfor %}
+
+            </ul>
+            </div>
+        </main>
+        <footer style="z-index:100">
+            <ul>
+                <a href="/"><li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li></a>
+                <li>
+                    <i class="iconfont icon-bofang3"></i>
+                    西瓜视频
+                </li>
+                <li>
+                    <i class="iconfont icon-renyuanguanli"></i>
+                    找人
+                </li>
+                <li>
+                    <i class="iconfont icon-iconfonthot"></i>
+                    小视频
+                </li>
+                <a href="/newslogin"><li>
+                    <i class="iconfont icon-renshu"></i>
+                    我的
+                </li>
+                </a>
+            </ul>
+        </footer>
+    </div>
+<script>
+   $(function () {
+    $("nav ul li").click(function () {
+        let index=$(this).index()
+        $("nav ul li a").css("color","black").eq(index).css("color","red")
+        $(".xxkBox").css({"z-index":"5","display":"none"}).eq(index).css({"z-index":"10","display":"block"})
+    })
+})
+</script>
+</body>
+</html>

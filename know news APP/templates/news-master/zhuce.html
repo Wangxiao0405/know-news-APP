@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui">
+        <title>注册</title>
+        <script src="static/js/rem.js"></script>
+        <script src="static/js/jQuery.js"></script>
+        <link rel="stylesheet" href="static/css/zhuce.css">
+    </head>
+    <body>
+    <header>
+        <h3>账号注册</h3>
+    </header>
+    <form action="zhuce" method="post">
+        <div class="box">
+            <input type="text" name="account" placeholder="请输入您的手机号" data-validate="required:请输入手机号,length#>=5:新密码不能小于11位" />
+            <!--<h3>发送验证码</h3>-->
+            <!--<input type="text" placeholder="请输入验证码">-->
+             <div class="form-group">
+                        <div class="field">
+                            <input type="text" class="input input-big" name="code" style="width:60%;float:left;margin-top:.4rem;" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码" />
+                           <img src="/static/admin/images/passcode.jpg"  alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer; float:right;margin-top:.4rem;" onclick="this.src=this.src+'?'">
+                        </div>
+              </div>
+            <!--<div class="box1" style="margin-top: 1.9rem;">注册</div>-->
+            <div  class="box1" style="margin-top: 1.9rem; background: #FAB4B4;"><input type="submit" style="background: #FAB4B4;color:white" class="button button-block bg-main text-big input-big" value="注册"></div>
+        </div>
+        <h4>点击查看<p>“用户协议”</p>和<p>“隐私政策”</p></h4>
+        <a href="/login1"><div class="run">
+            立即登录
+        </div>
+        </a>
+    </form>
+</body>
+<script src="/static/js/rem.js"></script>
+</html>

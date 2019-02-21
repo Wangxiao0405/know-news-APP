@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情</title>
+    <script src="/static/js/rem.js"></script>
+    <link rel="stylesheet" href="/static/css/xq.css">
+    <script src="/static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_773988_7selfvq38dk.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_849483_gqzo6lqbr9e.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_886529_9f8sx0o1dm.css">
+</head>
+<style>
+    .xq_header{
+        width: 100%;
+        height: 0.81rem;
+        overflow: hidden;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 0.01rem solid#fafafa;
+        z-index: 999;
+    }
+    .xq_pl_box li span{
+        font-size: 0.26rem;
+        line-height:.26rem
+        height:0.26rem;
+        width:auto;
+        color: #5979a6;
+        margin-left: 0.8rem;
+        margin-top:-0.35rem
+        font-weight:normal;
+        display:block;
+    }
+    .xq_pl_box .wz_time{
+        font-size: 0.26rem;
+        font-weight:normal;
+    }
+    .xq_wz_box h3{
+        font-size: 0.26rem;
+    }
+    <!--body{-->
+        <!--overflow-x:hidden;-->
+    <!--}-->
+    .xq_wz_box pre{
+        font-size: 0.27rem;
+        line-height: 0.38rem;
+    }
+     .xq_wz_box p{
+        font-size: 0.27rem;
+        line-height: 0.38rem;
+    }
+    .xq_pl_box{
+        width: 100%;
+        height: auto;
+        margin-top: 0.62rem;
+        padding-right: 0.34rem;
+        padding-left: 0.34rem;
+        padding-bottom: .98rem;
+        box-sizing: border-box;
+    }
+   footer{
+    width: 100%;
+    min-height:.98rem;
+    background: #fff;
+    padding: 0 .28rem;
+    box-sizing: border-box;
+    border-top: .01rem solid #F3F3F3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+footer .left{
+    width: 4rem;
+    height: .71rem;
+    margin-top: .13rem;
+    line-height: .71rem;
+    position: relative;
+    float: left;
+}
+footer .left .iconfont{
+    font-size: .3rem;
+}
+.icon-combinedshapecopy2{
+    color: black;
+    position: absolute;
+    left: .52rem;
+    top:.05rem;
+}
+footer .left .icon-icon_xiaolian-xian{
+    color: #8992a1;
+    position: absolute;
+    right: .22rem;
+    top:.05rem;
+    font-size: .4rem;
+}
+footer .left input{
+    width: 4.4rem;
+    height: .71rem;
+    padding-top: .21rem;
+    padding-right: .65rem;
+    /*height: auto; f2f5fc*/
+    background: #f3f4f5;
+    border-radius: .35rem;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+footer .left input::-webkit-input-placeholder{
+    font-size: .3rem;
+    color: black;
+}
+footer ul{
+    width: 2.45rem;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+footer ul li{
+    width: .71rem;
+    height: .71rem;
+    margin-top: .14rem;
+    text-align: center;
+    line-height: .71rem;
+    color: black;
+}
+footer ul li .iconfont{
+    font-size: .34rem;
+}
+footer ul li .icon-shoucang{
+    font-size: .4rem;
+}
+.footer1{
+    display: none;
+    height: auto;
+}
+.footer1 .left{
+    position: relative;
+}
+.footer1 .left input{
+    width: 6rem;
+    padding-left: .2rem;
+    background: #f3f4fc;
+}
+footer .left .word{
+    font-size: .3rem;
+    color: #000;
+    position: absolute;
+    left: .9rem;
+    top:.05rem;
+}
+.footer1 .left .word{
+    color: #c0c0c0;
+    position: absolute;
+    left: .3rem;
+    top:.05rem;
+}
+.footer1 .right{
+    margin-top: .14rem;
+    width: .9rem;
+    height: 100%;
+    float: right;
+    font-size: .3rem;
+    color: #c0c0c0;
+    text-align: right;
+    line-height: .71rem;
+    background: #fff;
+    outline: none;
+    border: none;
+}
+.xq_in_top2 .xq_in_top2_button1{
+    background: #fff;
+    color: #9b9b9b;
+    border: .01rem solid #9b9b9b;
+    display: none;
+}
+.selected{
+    color: orange;
+}
+.selected1{
+    color: red;
+}
+.huifu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: auto;
+    background-color: #fff;
+    display: none;
+    border-radius: .1rem;
+    padding-top:0.88rem;
+    padding-bottom: .98rem;
+    padding: 0 .24rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 999;
+}
+.huifu_header .num{
+    width: auto;
+    height: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: .81rem;
+    color: #000;
+    font-size: .28rem;
+    margin: 0 auto;
+}
+.hf_pl_box{
+    margin-top: 0;
+    padding-bottom: 0;
+}
+.hf_pl_box li{
+    height: 2.8rem;
+}
+.hf_pl_box .zan{
+    width: 100%;
+    height: .9rem;
+    padding-left: .72rem;
+    box-sizing: border-box;
+    line-height: .9rem;
+}
+.huifu .all{
+    width: 100%;
+    height: .85rem;
+    padding: 0 .3rem;
+    box-sizing: border-box;
+    font-size: .22rem;
+    color: #000;
+    line-height: .85rem;
+    font-weight: bold;
+
+}
+
+</style>
+<body>
+<div class="bg">
+    <div class="xq_header" id="xq_header">
+        <a href="/"><i class="iconfont icon-xiaoyuhao1 icon1"></i></a>
+        <i class="iconfont icon-iconfontzhizuobiaozhun023131 icon2"></i>
+        <i class="iconfont icon-sangedian icon3"></i>
+    </div>
+
+    {% for item in data %}
+    <div class="xq_in_top">{{item[1]}}</div>
+    <div class="xq_in_top2">
+        <div class="yuan" style="overflow:hidden">
+              <img src="/static/admin/images/y.jpg" alt="" width="100%" height="100%">
+        </div>
+        <span>{{item[2]}}</span>
+        <span class="xq_in_top2_time">{{item[5]}}</span>
+        <div class="xq_in_top2_button" id="xq_in_top2_button">关注</div>
+        <div class="xq_in_top2_button xq_in_top2_button1" id="xq_in_top2_button1">已关注</div>
+    </div>
+
+    <ul class="xq_wz_box" style="height:auto">
+        <li>{{item[3]|safe}}</li>
+
+    </ul>
+    {% endfor %}
+    <div class="xq_wz_h3">
+    <h3>相关搜索</h3>
+    </div>
+
+    <ul class="xq_wz_wz">
+        {% for item in keyword%}
+        <li style="text-align:center">{{item}}</li>
+        {% endfor %}
+    </ul>
+
+    <ul class="xq_zhuanfa">
+        <li>
+            <i class="iconfont icon-dianzan1"></i>
+            <span>145</span>
+        </li>
+        <li>
+            <i class="iconfont icon-lajixiang"></i>
+            <span>不喜欢</span>
+        </li>
+        <li>
+            <i class="iconfont icon-weixin"></i>
+            <span>微信</span>
+        </li>
+        <li>
+            <i class="iconfont icon-pengyouquan"></i>
+            <span>朋友圈</span>
+        </li>
+    </ul>
+    <div class="xq_bottom_wz_box_box">
+    <ul class="xq_bottom_wz_box">
+        {% for item in data1 %}
+        <a href="/xq{{item[0]}}"><li><p>{{item[1]}}</p></li></a>
+        {% endfor %}
+    </ul>
+    </div>
+    <ul class="xq_pl_box" id="xq_pl_box">
+        <li>
+         <div class="xq_pl_yonghu"></div>
+         <span >绿袖子8</span>
+         <p class="wz_wz">厦门是个慢节奏城市，两年前去了6天，但没有待够，还想去在海边静静坐一天，很舒服</p>
+         <h2 class="wz_time">09-2308：59·回复</h2>
+         <div class="dianzan">
+             <i class="iconfont icon-dianzan"></i>
+             赞
+         </div>
+     </li>
+        {% for item in comment %}
+        <li class="pl_hf">
+            <form action="javascript:;" method="post">
+                    <input type="hidden" name="comment1" id="com" value="{{item[2]}}">
+                    <div class="xq_pl_yonghu"></div>
+                    <span>{{item[0]}}</span>
+                    <p class="wz_wz">{{item[2]}}</p>
+                    <h2 class="wz_time">{{item[1]}}·回复</h2>
+                    <div class="dianzan">
+                        <i class="iconfont icon-dianzan"></i>
+                        赞
+                    </div>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <form method="post" class="form-x" action="javascript:;">
+        <input type="hidden" name="nid"  value="{{n_id}}" id="nid">
+        <input type="hidden" name="comment" value="">
+        <footer id="footer">
+        <div class="left">
+            <input type="text" placeholder="写评论...">
+            <i class="iconfont icon-combinedshapecopy2"></i>
+            <i class="iconfont icon-icon_xiaolian-xian"></i>
+        </div>
+        <ul>
+            <li>
+                <i class="iconfont icon-news"></i>
+            </li>
+            <li>
+                <button style="background:#fff;border:none;outline:none" type="submit" id="collect1"><i class="iconfont icon-shoucang" id="collect"></i></button>
+            </li>
+            <li>
+                <i class="iconfont icon-zhuanfa"></i>
+            </li>
+        </ul>
+
+        </footer>
+    </form>
+    <form method="post" class="form-x" action="javascript:;">
+        <input type="hidden" name="n_id" id="n_id" value="{{n_id}}">
+        <input type="hidden" name="n_id" id="account" value="{{account}}">
+        <footer class="footer1" id="footer1">
+            <div class="left">
+                <input name="comment" id="textarea" value="">
+                <div class="word" id="word">优质评论将会被优先展示</div>
+            </div>
+            <button class="right" type="submit" onclick="commit()"> 发布</button>
+        </footer>
+    </form>
+    <div class="huifu">
+        <!--<input type="hidden" name="comment" value="">-->
+        <div class="xq_header huifu_header">
+            <i class="iconfont icon-xiaoyuhao1 icon1"></i>
+            <div class="num">6条回复</div>
+        </div>
+        <ul class="xq_pl_box hf_pl_box" id="hf_pl_box" style="margin-top:0.92rem;">
+            <li id="hf">
+                <div class="xq_pl_yonghu"></div>
+                <span>184</span>
+                <p class="wz_wz">选举</p>
+                <h2 class="wz_time">23:00·回复</h2>
+                <div class="dianzan">
+                    <i class="iconfont icon-dianzan"></i>
+                    赞
+                </div>
+                <div class="zan">
+                    4人赞过
+                </div>
+            </li>
+        </ul>
+        <div class="all">全部评论</div>
+        <ul class="xq_pl_box" style="margin-top: 0;" id="addhf_box">
+
+            <li id="hf_hf">
+                <div class="xq_pl_yonghu"></div>
+                <span>184</span>
+                <p class="wz_wz">厦门厦门<a style="margin-left:.3rem;color:blue">//@123：</a>厦门是个慢节奏城市，两年前去了6天，但没有待够，还想去在海边静静坐一天，很舒服</p>
+                <h2 class="wz_time">09-2308：59·回复</h2>
+                <div class="dianzan">
+                <i class="iconfont icon-dianzan"></i>
+                赞
+                </div>
+            </li>
+            {% for item in huifu %}
+            <li id="hf_hf_hf">
+                <form action="javascript:;" method="post">
+                    <input type="hidden" name="huifu1"  value="{{item[2]}}">
+                    <div class="xq_pl_yonghu"></div>
+                    <span>{{item[0]}}</span>
+                    <p class="wz_wz">{{item[2]}}<a style="margin-left:.3rem;color:blue">//@123：</a>厦门是个慢节奏城市，两年前去了6天，但没有待够，还想去在海边静静坐一天，很舒服</p>
+                    <h2 class="wz_time">{{item[1]}}·回复</h2>
+                    <div class="dianzan">
+                    <i class="iconfont icon-dianzan"></i>
+                    赞
+                    </div>
+                </form>
+            </li>
+            {% endfor %}
+
+
+
+        </ul>
+        <form action="javascripts:;" method="post">
+        <footer id="footer2" style="z-index:10">
+            <div class="left">
+                <input type="text" placeholder="写回复...">
+                <i class="iconfont icon-combinedshapecopy2"></i>
+                <i class="iconfont icon-icon_xiaolian-xian"></i>
+            </div>
+            <ul>
+                <li>
+                    <i class="iconfont icon-news"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-shoucang"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-zhuanfa"></i>
+                </li>
+            </ul>
+        </footer>
+        </form>
+        <form action="javascript:;" method="post">
+            <footer class="footer1" id="footer3" style="z-index:10">
+                <div class="left">
+                    <input type="hidden" name="n_id1" id="n_id1" value="{{n_id}}">
+                    <input type="hidden" name="u_id" id="u_id" value="{{u_id}}">
+                    <input type="hidden" name="account1" id="account1" value="{{account}}">
+                    <input type="text" name="addhf" id="textarea1">
+                    <div class="word" id="word1">优质评论将会被优先展示</div>
+                </div>
+                <button class="right" id="button" type="submit" onclick="commit1()"> 发布</button>
+            </footer>
+        </form>
+        <form action="javascripts:;" method="post">
+            <footer id="footer4" style="z-index:8">
+                <div class="left">
+                    <input type="text" placeholder="回复...">
+                    <i class="iconfont icon-combinedshapecopy2"></i>
+                    <i class="iconfont icon-icon_xiaolian-xian"></i>
+                </div>
+                <ul>
+                    <li>
+                        <i class="iconfont icon-news"></i>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-shoucang"></i>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-zhuanfa"></i>
+                    </li>
+                </ul>
+            </footer>
+        </form>
+        <form action="javascript:;" method="post">
+            <footer class="footer1" id="footer5" style="z-index:8">
+                <div class="left">
+                    <input type="hidden" name="u_id2" id="u_id2" value="{{u_id}}">
+                    <input type="hidden" name="account2" id="account2" value="{{account}}">
+                    <input type="text" name="addhf" id="textarea2">
+                    <div class="word" id="word4">优质评论将会被优先展示</div>
+                </div>
+                <button class="right" id="button1" type="submit" onclick="commit2()"> 发布</button>
+            </footer>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let scrollHeight=document.body.scrollTop||document.documentElement.scrollTop;
+        $("#footer input").focus(function () {
+            $("#footer").css("display", "none");
+            $("#footer1").css("display", "block")
+        });
+        $("#footer1 input").focus(function () {
+            $("#footer1 .right").css("color", "blue");
+            $("#word").css("display", "none");
+        });
+
+        $(window).scroll( function(){
+            $(".xq_header").css({"position":"fixed","top":"0","left":"0"});
+            $(".xq_in_top").css("margin-top","0.81rem")
+        });
+        $("#xq_in_top2_button").click(function () {
+            $("#xq_in_top2_button").css("display", "none")
+            $("#xq_in_top2_button1").css("display", "block")
+        })
+        $("#xq_in_top2_button1").click(function () {
+            $("#xq_in_top2_button").css("display", "block")
+            $("#xq_in_top2_button1").css("display", "none")
+        })
+        /*$(".icon-shoucang").click(function () {
+            $(".icon-shoucang").toggleClass("selected");
+        })*/
+        $(".icon-dianzan").click(function () {
+        let index=$(this).index()
+            $(".icon-dianzan").eq(index).toggleClass("selected1");
+        })
+        let comment=$("#xq_pl_box li")
+        console.log(comment);
+        comment.click(function () {
+            $(".huifu").css("display","block")
+
+            <!--$("body").css("overflow","hidden")-->
+        })
+        let back=$(".huifu_header .icon-xiaoyuhao1")
+        back.click(function () {
+            $(".huifu").css("display","none")
+            $("body").css("overflow","auto")
+        })
+        $("#footer2 input").focus(function () {
+            $("#footer2").css("display", "none");
+            $("#footer3").css("display", "block")
+        });
+        <!--三级回复-->
+         $("#footer4 input").focus(function () {
+            $("#footer4").css("display", "none");
+            $("#footer5").css("display", "block")
+        });
+         $("#hf_hf").click(function () {
+                $("#footer2").css("z-index", "5");
+                $("#footer3").css("z-index", "5");
+
+         })
+         $("#hf_hf_hf").click(function () {
+                $("#footer2").css("z-index", "5");
+                $("#footer3").css("z-index", "5");
+
+         })
+         $("#footer5 input").focus(function () {
+            console.log(3)
+            $("#footer5 .right").css("color", "blue");
+            $("#word4").css("display", "none");
+        });
+
+        $("#footer3 input").focus(function () {
+            console.log(3)
+            $("#footer3 .right").css("color", "blue");
+            $("#word1").css("display", "none");
+        });
+        $("#button").click(function () {
+            $("#footer2").css("display", "block");
+            $("#footer3").css("display", "none")
+        });
+         $("#button1").click(function () {
+            $("#footer2").css("z-index", "5");
+            $("#footer3").css("z-index", "5");
+        });
+
+});
+
+     let flag =true
+      function commit(){
+        let comment = $("#textarea").val()
+        let n_id=$("#n_id").val()
+        let account=$("#account").val()
+        if (comment != "" && flag){
+          $.ajax({
+            url:"/comment",
+            type:"post",
+            data:{comment:comment,n_id:n_id,account:account},
+            success:function(e){
+              if(e.info=="ok"){
+                $("#textarea").val("")
+                $("#xq_pl_box").append($(
+                `
+                <li class="pl_hf">
+                    <div class="xq_pl_yonghu"></div>
+                    <span>${e.account}</span>
+                    <p class="wz_wz">${comment}</p>
+                    <h2 class="wz_time">${e.u_time}·回复</h2>
+                    <div class="dianzan">
+                        <i class="iconfont icon-dianzan"></i>
+                        赞
+                    </div>
+                </li>
+                `
+                ))
+              }
+            }
+          })
+        }
+      }
+
+      flag=true
+      <!--let hf_button=$("#button")-->
+       <!--hf_button.click(function () {-->
+
+        <!--})-->
+        function commit1(){
+             console.log('你好')
+            let hfhf = $("#textarea1").val()
+            let n_id=$("#n_id1").val()
+            let u_id=$("#u_id").val()
+            let account=$("#account1").val()
+            if (hfhf != "" && flag){
+              $.ajax({
+                url:"/addhuifu",
+                type:"post",
+                data:{hfhf:hfhf,u_id:u_id,account:account,n_id:n_id},
+                success:function(e){
+                console.log('aaaa')
+                  if(e.info=="ok"){
+                    $("#textarea1").val("")
+                    $("#addhf_box").append($(
+                    `
+                    <li id="hf_hf">
+                        <div class="xq_pl_yonghu"></div>
+                        <span>${e.account}</span>
+                        <p class="wz_wz">${hfhf}</p>
+                        <h2 class="wz_time">${e.u_time}·回复</h2>
+                        <div class="dianzan">
+                            <i class="iconfont icon-dianzan"></i>
+                            赞
+                        </div>
+                    </li>
+                    `
+                    ))
+                  }
+                }
+              })
+            }
+
+        }
+        <!--收藏-->
+      $("#collect1").click(function(){
+         let nid=$("#nid").val()
+        $.ajax({
+            url:"/collect",
+            type:"post",
+            data:{nid:nid},
+            success:function(e){
+                if(e=="ok"){
+                    $("#collect").css("color","orange")
+                }
+            }
+        })
+      })
+      <!--打开回复页面-->
+      let comment1=$("[name=comment1]").val()
+      console.log(comment1)
+      $(".pl_hf").click(function(){
+            $.ajax({
+            url:"/huifu",
+            type:"post",
+            data:{comment1:comment1},
+            success:function(e){
+                if(e.info=="ok"){
+                console.log("替换")
+                    $("#hf").replaceWith($(
+                    `
+                     <li id="hf">
+                        <div class="xq_pl_yonghu"></div>
+                        <span>${e.account}</span>
+                        <p class="wz_wz">${e.word}</p>
+                        <h2 class="wz_time">${e.u_time}·回复</h2>
+                        <div class="dianzan">
+                            <i class="iconfont icon-dianzan"></i>
+                            赞
+                        </div>
+                        <div class="zan">
+                            4人赞过
+                        </div>
+                    </li>
+
+                    `
+                    ))
+                }
+            }
+        })
+
+      })
+    <!--增加回复-->
+    function commit2(){
+    console.log("你好你好")
+        let addhf3 = $("#textarea2").val()
+        let u_id=$("#u_id2").val()
+        let account=$("#account").val()
+            $.ajax({
+                url:"/addhf3",
+                type:"post",
+                data:{addhf3:addhf3,u_id:u_id,account:account},
+                success:function(e){
+                    if(e.info=="ok"){
+                        $("#textarea2").val("")
+                        $("#addhf_box").append($(
+                            `
+                             <li id="hf_hf_hf">
+                                <div class="xq_pl_yonghu"></div>
+                                <span>${e.account}</span>
+                                <p class="wz_wz">${addhf3}<a style="margin-left:.3rem;color:blue">//@${e.account}：</a>厦门厦门</p>
+                                <h2 class="wz_time">${e.u_time}·回复</h2>
+                                <div class="dianzan">
+                                <i class="iconfont icon-dianzan"></i>
+                                赞
+                                </div>
+                             </li>
+                            `
+                        ))
+                    }
+                }
+            })
+    }
+
+
+
+let huifu1=$("[name=addhf]").val()
+      $("#hf_hf").click(function(){
+            console.log(huifu1)
+            $.ajax({
+                url:"/huifu",
+                type:"post",
+                data:{huifu1:huifu1},
+                success:function(e){
+                    if(e.info=="ok"){
+                       console.log("三级回复成功")
+                    }
+                }
+            })
+      })
+ <!--let comment = $("#textarea").val()-->
+ <!--let n_id=$("#n_id").val()-->
+ <!--console.log(n_id)-->
+ <!--let xq_pl_box = $("#xq_pl_box")-->
+ <!--let hf_pl_box=$("#addhf_box")-->
+ <!--$.ajax({-->
+        <!--url:"/listComments",-->
+        <!--data:{n_id:n_id},-->
+        <!--type:"post",-->
+        <!--success:function(obj){-->
+            <!--cj = obj['cj']-->
+            <!--console.log(cj)-->
+            <!--obj = obj['data']-->
+            <!--PLtemplate(cj,obj)-->
+        <!--}-->
+    <!--})-->
+
+    <!--//渲染评论-->
+    <!--function PLtemplate(cj,obj){-->
+    <!--console.log("渲染评论")-->
+        <!--let str = ""  // 评论-->
+        <!--for(let i=0;i<cj.length;i++){-->
+            <!--let id = cj[i][0]-->
+            <!--&lt;!&ndash;let hf = ""&ndash;&gt;-->
+            <!--let hfid = cj[i][1]-->
+
+            <!--hf+=HFtemplate(hfid,obj,hf)-->
+
+            <!--str+=`-->
+            <!--<li id="pl_hf">-->
+             <!--<div class="xq_pl_yonghu"></div>-->
+             <!--<span>${obj[id]['account']}</span>-->
+             <!--<p class="wz_wz">${obj[id]['con']}</p>-->
+             <!--<h2 class="wz_time">09-2308：59·回复</h2>-->
+             <!--<div class="dianzan">-->
+                 <!--<i class="iconfont icon-dianzan"></i>-->
+                 <!--赞-->
+             <!--</div>-->
+             <!--&lt;!&ndash;<ul class="hf_box">&ndash;&gt;-->
+                <!--&lt;!&ndash;${hf}&ndash;&gt;-->
+             <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+         <!--</li>`-->
+
+        <!--}-->
+
+        <!--xq_pl_box.append($(str))-->
+    <!--}-->
+
+    <!--//渲染回复-->
+    <!--function HFtemplate(arr,obj){-->
+    <!--console.log("渲染回复")-->
+        <!--let hf = ""-->
+        <!--if(arr.length==0){-->
+            <!--hf+=""-->
+        <!--}-->
+        <!--for(let i=0;i<arr.length;i++){-->
+            <!--if(arr[i][1].length==0){-->
+                <!--hf+=-->
+                <!--`-->
+                 <!--<li id="hf_hf">-->
+                     <!--<div class="xq_pl_yonghu"></div>-->
+                     <!--<span>${obj[arr[i][0]]['account']}</span>-->
+                     <!--<p class="wz_wz">${obj[arr[i][0]]['con']}</p>-->
+                     <!--<h2 class="wz_time">09-2308：59·回复</h2>-->
+                     <!--<div class="dianzan">-->
+                         <!--<i class="iconfont icon-dianzan"></i>-->
+                         <!--赞-->
+                     <!--</div>-->
+                 <!--</li>-->
+                <!--`-->
+                <!--&lt;!&ndash;`<li id="hf_hf">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span>${obj[arr[i][0]]['account']}</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span>:</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span>${obj[obj[arr[i][0]]['u_id']]['account']}:</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span style="color:black">${obj[arr[i][0]]['con']}</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span style="color:blue" class="hf" c_id="" >回复</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>`&ndash;&gt;-->
+
+            <!--}else{-->
+                <!--hf+=-->
+                    <!--`-->
+                     <!--<li id="hf_hf">-->
+                        <!--<div class="xq_pl_yonghu"></div>-->
+                        <!--<span>${obj[arr[i][0]]['account']}</span>-->
+                        <!--<p class="wz_wz">${obj[arr[i][0]]['con']}<a style="margin-left:.3rem;color:blue">//@${obj[obj[arr[i][0]]['u_id']]['account']}：-->
+                        <!--</a>${obj[obj[arr[i][0]]['u_id']]['con']}</p>-->
+                        <!--<h2 class="wz_time">09-2308：59·回复</h2>-->
+                        <!--<div class="dianzan">-->
+                        <!--<i class="iconfont icon-dianzan"></i>-->
+                        <!--赞-->
+                        <!--</div>-->
+                     <!--</li>-->
+                    <!--`-->
+
+
+                <!--hf+=HFtemplate(arr[i][1],obj)-->
+            <!--}-->
+
+        <!--}-->
+        <!--hf_pl_box.append($(hf))-->
+
+    <!--}-->
+</script>
+</body>
+<script src="/static/js/rem.js"></script>
+</html>

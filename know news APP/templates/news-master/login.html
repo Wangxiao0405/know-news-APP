@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的</title>
+    <script src="/static/js/rem.js"></script>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_773988_lztxgee1xa8.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_849483_gqzo6lqbr9e.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<style>
+    .login_in_top li{
+        line-height:1.23rem;
+        padding-top:0;
+    }
+    .login_in_top i{
+        margin-top:-0.15rem;
+        font-size: 0.42rem;
+        margin-left: 1.02rem;
+        display:block;
+
+    }
+    .login_in_top span{
+        margin-top:-0.69rem;
+        display:block;
+
+    }
+    body{
+        overflow-y:hidden;
+    }
+    
+</style>
+<body>
+    <div class="bg">
+        <div class="login_header">
+        <div class="login_header_in">
+          <div class="yuan" style="overflow:hidden">
+              {% for item in data %}
+              <img src="{{item[4]}}" alt="" width="100%" height="100%">
+              {% endfor %}
+          </div>
+            <span>{{account}}</span>
+            <div class="tuoyan">申请认证</div>
+        </div>
+        <ul class="login_header_in_bottom">
+            <li>
+                <span>7</span>
+                <span>动态</span>
+            </li>
+            <li>
+                <span>0</span>
+                <span>关注</span>
+            </li>
+            <li>
+                <span>2</span>
+                <span>粉丝</span>
+            </li>
+        </ul>
+        </div>
+        <ul class="login_in_top">
+            <li>
+                <a href="/opencollect">
+                    <i class="iconfont icon-shoucangjia icon1"></i>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li>
+                <i class="iconfont icon-lishi icon2"></i>
+                <span>历史</span>
+            </li>
+            <li>
+                <i class="iconfont icon-yejianmoshi icon3"></i>
+                <span>夜间</span>
+            </li>
+        </ul>
+        <ul class="login_in">
+        <li>我的关注 <i class="iconfont icon-xiaoyuhao2"></i></li>
+        <li>消息通知 <i class="iconfont icon-xiaoyuhao2"></i></li>
+        </ul>
+            <ul class="login_in">
+                <li>我的钱包 <i class="iconfont icon-xiaoyuhao2"></i><span>手机充值</span></li>
+                <li>京东特供 <i class="iconfont icon-xiaoyuhao2"></i><span>返双节专项礼包送不停</span></li>
+            </ul>
+            <ul class="login_in_bottom">
+                <li><a href="/openeditdata" style="width:100%;height:100%;display:block;font-size: 0.32rem;color: #282828;line-height: 0.90rem;">编辑资料 <i class="iconfont icon-xiaoyuhao2"></i></a></li>
+                <li><a href="/loginout1" style="width:100%;height:100%;display:block;font-size: 0.32rem;color: #282828;line-height: 0.90rem;">退出登录 <i class="iconfont icon-xiaoyuhao2"></i></a></li>
+            </ul>
+            <ul class="login_in_bottom">
+
+            </ul>
+    </div>
+    <footer>
+        <ul>
+            <a href="/">
+                <li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li>
+            </a>
+            <li>
+                <i class="iconfont icon-bofang3"></i>
+                西瓜视频
+            </li>
+            <li>
+                <i class="iconfont icon-renyuanguanli"></i>
+                找人
+            </li>
+            <li>
+                <i class="iconfont icon-iconfonthot"></i>
+                小视频
+            </li>
+            <a href="/newslogin"><li>
+                <i class="iconfont icon-renshu"></i>
+                我的
+            </li></a>
+        </ul>
+    </footer>
+</body>
+<script src="js/rem.js"></script>
+</html>

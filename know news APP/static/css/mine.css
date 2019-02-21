@@ -1,0 +1,299 @@
+@import "base.css";
+.bg{
+    width: 100%;
+    height: auto;
+    background: #F3F3F3;
+}
+.xq_header{
+    width: 100%;
+    height: 0.81rem;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0.01rem solid#fafafa;
+    z-index: 999;
+}
+.xq_header .icon1{
+    display: block;
+    font-size: 0.36rem;
+    margin-top: 0.22rem;
+}
+.xq_header .icon2{
+    display: block;
+    font-size: 0.36rem;
+    margin-top: 0.22rem;
+    margin-left: 6.02rem;
+}
+.xq_header .icon3{
+    display: block;
+    font-size: 0.36rem;
+    margin-top: 0.22rem;
+    margin-left: 0.3rem;
+
+}
+nav{
+    width: 100%;
+    height: .77rem;
+    background: #fff;
+    padding: 0 .9rem;
+    box-sizing: border-box;
+    border-bottom: .02rem solid #f3f3f3;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+    width: 1.2rem;
+    height: 100%;
+    font-size: .26rem;
+    color: #000;
+    text-align: center;
+    line-height: .7rem;
+    font-weight: bold;
+    border-bottom: .07rem solid #fff;
+    box-sizing: border-box;
+}
+/*nav ul li:first-child{*/
+    /*border-bottom: .07rem solid red;*/
+    /*color: red;*/
+/*}*/
+.select{
+    border-bottom: .07rem solid red;
+    color: red;
+}
+main{
+    width: 100%;
+    height: auto;
+    /*min-height: 11.34rem;*/
+    padding: 0 .24rem;
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+
+}
+main .xxk{
+    width: 100%;
+    height: 100%;
+    /*min-height: 11.34rem;*/
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+main .big{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 0 .24rem;
+    padding-bottom: .98rem;
+    box-sizing: border-box;
+
+}
+main ul li{
+    background: #fff;
+    margin-bottom: .2rem;
+}
+main ul .picli{
+    width: 100%;
+    height: 2.88rem;
+    /*overflow: hidden;*/
+    border-bottom: .01rem solid #efefef;
+    position: relative;
+}
+main ul .picli .alert{
+    width: 6.93rem;
+    height: 5.38rem;
+    background: red;
+    border-radius: .1rem;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    z-index: 5;
+}
+main ul li .tittle{
+    width: 100%;
+    height: .26rem;
+    font-weight: bold;
+    font-size: .26rem;
+    color: #000;
+    line-height: .26rem;
+    margin-top: .3rem;
+    margin-bottom: .18rem;
+}
+main ul .picli .picBox{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+main ul .picli .picBox .pic{
+    width: 2.27rem;
+    height: 100%;
+    background: url("../img/1.jpg") no-repeat center;
+    background-size: contain;
+}
+main ul .picli .picBox .pic:nth-child(2){
+    background-image: url("../img/2.jpg");
+}
+main ul .picli .picBox .pic:last-child{
+    background-image: url("../img/3.jpg");
+}
+main ul li .bottom{
+    width: 100%;
+    height: .24rem;
+    margin-top: .18rem;
+}
+main ul li .bottom span{
+    margin-right: .1rem;
+    font-size: .18rem;
+    line-height: .24rem;
+    color: #979797;
+}
+main ul li .bottom .icon-guanbi{
+    float: right;
+    color: #979797;
+    line-height: .3rem;
+    font-size: .24rem;
+}
+main ul .newsli{
+    padding-top: .1rem;
+    /*box-sizing: border-box;*/
+    width: 100%;
+    height: 2.73rem;
+    border-bottom: .01rem solid #efefef;
+    position: relative;
+}
+main ul .news_picli{
+    width: 100%;
+    height: 3.75rem;
+    border-bottom: .01rem solid #efefef;
+}
+main ul li .top{
+    width: 100%;
+    height: 1rem;
+    padding-top: .25rem;
+    box-sizing: border-box;
+}
+main ul li .top .touxiang{
+    width: .72rem;
+    height: .72rem;
+    border-radius: .36rem;
+    margin-right: .3rem;
+    float: left;
+    overflow: hidden;
+}
+main ul li .top .touxiang img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+main ul .news_picli .middle{
+    margin-top: .14rem;
+    height: 1.48rem;
+    width: 100%;
+}
+main ul .news_picli .left{
+    width: 4.36rem;
+    height: 1.48rem;
+    float: left;
+}
+main ul li .top .author{
+    width: 3rem;
+    height: .72rem;
+    float: left;
+}
+main ul li .top .author h1{
+    font-size: .3rem;
+    color: #000;
+    line-height: .3rem;
+}
+main ul li .top .author h2{
+    font-size: .22rem;
+    color: #8e8e8e;
+    line-height: .22;
+    margin-top: .3rem;
+}
+main ul li .more{
+    width: 100%;
+    height: .83rem;
+    /*margin-top: 1.8rem;*/
+}
+main ul li .more li{
+    width: 33.3%;
+    height: .83rem;
+    float: left;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: .22rem;
+    line-height: 1rem;
+}
+main ul li .more li .iconfont{
+    font-size: .26rem;
+    margin-right: .1rem;
+}
+main ul .news_picli .right{
+    width: 2.18rem;
+    height: 1.48rem;
+    float: right;
+    /*margin-top: .24rem;*/
+    background: url("../img/ren.jpg") no-repeat center;
+    background-size: contain;
+}
+main ul .news_picli .left .tittle{
+    line-height: .38rem;
+}
+main ul .news_picli .left .bottom{
+    margin-top: .6rem;
+}
+main ul .vodeoli{
+    width: 100%;
+    height: 7.1rem;
+    border-bottom: .01rem solid #efefef;
+}
+
+main ul .vodeoli .tittle{
+    line-height: .31rem;
+}
+main ul .vodeoli .videoBox{
+    width: 100%;
+    height: 3.93rem;
+    background: chocolate;
+    margin-top: 30px;
+    background: url("../img/video.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+main ul .vodeoli .videoBox .iBox{
+    width: .9rem;
+    height: .9rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: .45rem;
+    position: absolute;
+    left: 44%;
+    top: 40%;
+    text-align: center;
+    line-height: .9rem;
+
+}
+main ul .vodeoli .videoBox .iconfont{
+    font-size: .4rem;
+    color: white;
+
+}
+main ul li .content{
+    width: 100%;
+    height: .64rem;
+    font-size: .26rem;
+    color: #000;
+    line-height: .64rem;
+    text-align: left;
+}
+.dianzan .more li:last-child{
+    color: red;
+}

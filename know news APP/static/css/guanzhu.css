@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+}
+header{
+    width: 7.50rem;
+    height: 0.74rem;
+    display: flex;
+    flex-wrap: wrap;
+    /*background: #ffc299;*/
+    border-bottom: 0.01rem solid#eaeaea;
+}
+.fanhui{
+    width: 0.55rem;
+    height: 0.74rem;
+    /*background: #0070c9;*/
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 0.74rem;
+
+}
+.xuanxiang_box{
+    width: 1.86rem;
+    height: 0.74rem;
+    /*background: #2bd171;*/
+    margin: 0 auto;
+}
+.in_left_btn{
+    width: 0.55rem;
+    height: 0.74rem;
+    /*background: #3b7107;*/
+    float: left;
+    border-bottom: 0.02rem solid#ca5d47;
+    font-size: 0.24rem;
+    color: #ec545e;
+    text-align: center;
+    line-height: 0.74rem;
+}
+.in_right_btn{
+    width: 0.55rem;
+    height: 0.74rem;
+    /*background: #3b7107;*/
+    float: right;
+    font-size: 0.24rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.74rem;
+}
+.bg{
+    width: 7.50rem;
+    height: auto;
+    padding-left: 0.24rem;
+    box-sizing: border-box;
+}
+.bg li{
+    width: 7.26rem;
+    height: 1.64rem;
+    /*background: #83c44e;*/
+    border-bottom: 0.01rem solid#f6f6f6;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.bg .touxinag{
+    width: 1.14rem;
+    height: 1.14rem;
+    border-radius: 50%;
+    background: #ffc299;
+    margin-top: 0.24rem;
+}
+.bg .touxinag img{
+     width: 1.14rem;
+     height: 1.14rem;
+     border-radius: 50%;
+
+}
+.bg .wz_box{
+    width: 1.80rem;
+    height: 1.64rem;
+    /*background: #3b7107;*/
+}
+.bg .wz{
+    display: block;
+    width: 1.80rem;
+    font-size: 0.26rem;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem;
+    float: left;
+}
+.bg .wz2{
+    display: block;
+    width: 1.80rem;
+    font-size: 0.26rem;
+    color: #929292;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem;
+    float: left;
+}
+.bg .gz_btn{
+    width: 0.98rem;
+    height: 0.48rem;
+    border-radius: 0.08rem;
+    border: 0.01rem solid#e3e3e3;
+    font-size: 0.2rem;
+    color: #8d8d8d;
+    text-align: center;
+    line-height: 0.48rem;
+    position: absolute;
+    right: 0.24rem;
+    top:0.56rem;
+}
+.bg .gz_btn1{
+    width: 0.98rem;
+    height: 0.48rem;
+    border-radius: 0.08rem;
+    background: #ff4045;
+    font-size: 0.2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.48rem;
+    position: absolute;
+    right: 0.24rem;
+    top:0.56rem;
+}

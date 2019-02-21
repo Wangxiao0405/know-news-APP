@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script src="/static/js/rem.js"></script>
+    <script src="/static/js/jQuery.js"></script>
+    <script src="/static/js/mine.js"></script>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_773988_7selfvq38dk.css">
+    <link rel="stylesheet" href="/static/css/mine.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_886529_9f8sx0o1dm.css">
+</head>
+<body>
+    <div class="bg">
+        <div class="xq_header" id="xq_header">
+            <a href="/newslogin"><i class="iconfont icon-xiaoyuhao1 icon1"></i></a>
+            <i class="iconfont icon-iconfontzhizuobiaozhun023131 icon2"></i>
+            <i class="iconfont icon-sangedian icon3"></i>
+        </div>
+        <nav>
+            <ul>
+                <li class="select">收藏</li>
+                <li>评论</li>
+                <li>点赞</li>
+            </ul>
+        </nav>
+        <main>
+            <div class="xxk" style="z-index: 10">
+                <ul class="big" >
+                    {% for item in data %}
+                        {% if item[9]==2 %}
+                <li class="vodeoli">
+                    <a href="/xq{{item[0]}}">
+                    <div class="top">
+                        <div class="touxiang">
+                            <img src="/static/img/1.jpg" alt="">
+                        </div>
+                        <div class="author">
+                            <h1>{{item[2]}}</h1>
+                            <h2>{{item[5]}}</h2>
+                        </div>
+                    </div>
+                    <div class="tittle">{{item[1]}}</div>
+                       {% for i in range(1) %}
+                    <div class="videoBox" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    <ul class="more">
+                        <li>
+                            <i class="iconfont icon-iconzhuanfa"></i>
+                            251
+                        </li>
+                        <li>
+                            <i class="iconfont icon-weibiaoti-"></i>
+                            1.3万
+                        </li>
+                        <li>
+                            <i class="iconfont icon-z-like"></i>
+                            100
+                        </li>
+                    </ul>
+                    </a>
+                </li>
+                    {% elif item[9] ==0 %}
+                <li class="newsli">
+                    <a href="/xq{{item[0]}}">
+                    <div class="top">
+                        <div class="touxiang">
+                            <img src="/static/img/1.jpg" alt="">
+                        </div>
+                        <div class="author">
+                            <h1>{{item[2]}}</h1>
+                            <h2>{{item[5]}}</h2>
+                        </div>
+                    </div>
+                    <div class="tittle">{{item[1]}}</div>
+                    <ul class="more">
+                        <li>
+                            <i class="iconfont icon-iconzhuanfa"></i>
+                            251
+                        </li>
+                        <li>
+                            <i class="iconfont icon-weibiaoti-"></i>
+                            1.3万
+                        </li>
+                        <li>
+                            <i class="iconfont icon-z-like"></i>
+                            100
+                        </li>
+                    </ul>
+                    </a>
+                </li>
+                    {% elif item[9] >=3 %}
+                <li class="news_picli">
+                    <a href="/xq{{item[0]}}">
+                    <div class="top">
+                        <div class="touxiang">
+                            <img src="/static/img/1.jpg" alt="">
+                        </div>
+                        <div class="author">
+                            <h1>{{item[2]}}</h1>
+                            <h2>{{item[5]}}</h2>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <div class="left">
+                            <div class="tittle">{{item[1]}}</div>
+                        </div>
+                        {% for i in range(1)%}
+                        <div class="right" style="background:url({{ item[6][i]}}) no-repeat center;background-size:cover"></div>
+                        {% endfor %}
+                    </div>
+                    <ul class="more">
+                        <li>
+                            <i class="iconfont icon-iconzhuanfa"></i>
+                            251
+                        </li>
+                        <li>
+                            <i class="iconfont icon-weibiaoti-"></i>
+                            1.3万
+                        </li>
+                        <li>
+                            <i class="iconfont icon-z-like"></i>
+                            100
+                        </li>
+                    </ul>
+                    </a>
+                </li>
+                       {% endif %}
+                 {% endfor %}
+            </ul>
+            </div>
+            <div class="xxk">
+                <ul class="big comment">
+                    <li class="news_picli">
+                        <div class="top">
+                            <div class="touxiang">
+                                <img src="img/1.jpg" alt="">
+                            </div>
+                            <div class="author">
+                                <h1>环球网</h1>
+                                <h2>09-52 19:00</h2>
+                            </div>
+                        </div>
+                        <div class="content" >加油加油</div>
+                        <div class="middle" style="border: .01rem solid #f3f3f3">
+                            <div class="left">
+                                <div class="tittle">商务部副部长：把刀架在中国脖子上的谈判毫无诚意</div>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <ul class="more">
+                            <li>
+                                <i class="iconfont icon-iconzhuanfa"></i>
+                                251
+                            </li>
+                            <li>
+                                <i class="iconfont icon-weibiaoti-"></i>
+                                1.3万
+                            </li>
+                            <li>
+                                <i class="iconfont icon-z-like"></i>
+                                100
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="newsli">
+                        <div class="top">
+                            <div class="touxiang">
+                                <img src="img/1.jpg" alt="">
+                            </div>
+                            <div class="author">
+                                <h1>环球网</h1>
+                                <h2>09-52 19:00</h2>
+                            </div>
+                        </div>
+                        <div class="tittle">习近平再谈乡村振兴战略，这几点很重要</div>
+                        <ul class="more">
+                            <li>
+                                <i class="iconfont icon-iconzhuanfa"></i>
+                                251
+                            </li>
+                            <li>
+                                <i class="iconfont icon-weibiaoti-"></i>
+                                1.3万
+                            </li>
+                            <li>
+                                <i class="iconfont icon-z-like"></i>
+                                100
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="vodeoli">
+                        <div class="top">
+                            <div class="touxiang">
+                                <img src="img/1.jpg" alt="">
+                            </div>
+                            <div class="author">
+                                <h1>环球网</h1>
+                                <h2>09-52 19:00</h2>
+                            </div>
+                        </div>
+                        <div class="tittle">如果你的爱情不介意年龄，不妨看看这个视频，或许能明白许多！</div>
+                        <div class="videoBox"></div>
+                        <ul class="more">
+                            <li>
+                                <i class="iconfont icon-iconzhuanfa"></i>
+                                251
+                            </li>
+                            <li>
+                                <i class="iconfont icon-weibiaoti-"></i>
+                                1.3万
+                            </li>
+                            <li>
+                                <i class="iconfont icon-z-like"></i>
+                                100
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="xxk">
+                <ul class="big dianzan">
+                <li class="news_picli">
+                    <div class="top">
+                        <div class="touxiang">
+                            <img src="img/1.jpg" alt="">
+                        </div>
+                        <div class="author">
+                            <h1>环球网</h1>
+                            <h2>09-52 19:00</h2>
+                        </div>
+                    </div>
+                    <div class="content">转发了</div>
+                    <div class="middle" style="border: .01rem solid #f3f3f3">
+                        <div class="left">
+                            <div class="tittle"><span style="color: #638bff">@环球网:</span> 商务部副部长：把刀架在中国脖子上的谈判毫无诚意</div>
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                    <ul class="more">
+                        <li>
+                            <i class="iconfont icon-iconzhuanfa"></i>
+                            251
+                        </li>
+                        <li>
+                            <i class="iconfont icon-weibiaoti-"></i>
+                            1.3万
+                        </li>
+                        <li>
+                            <i class="iconfont icon-z-like"></i>
+                            100
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/guanzhu.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_773988_ilga99eqxu.css">
+</head>
+<body>
+<header>
+<div class="fanhui"><i class="iconfont icon-xiaoyuhao"></i></div>
+    <div class="xuanxiang_box">
+        <div class="in_left_btn">关注</div>
+        <div class="in_right_btn">粉丝</div>
+    </div>
+</header>
+<ul class="bg">
+    {%for item in data %}
+
+<li>
+    <div class="touxinag">
+        <img src="{{item[4]}}" alt="">
+    </div>
+    <div class="wz_box">
+    <span class="wz">{{item[2]}}</span>
+    <span class="wz2">{{item[3]}}</span>
+    <span class="wz2">粉丝数：11万</span>
+    </div>
+    <div class="gz_btn">已关注</div>
+</li>
+
+    {% endfor %}
+
+</ul>
+</body>
+<script src="/static/js/jQuery.js"></script>
+<script src="/static/js/rem.js"></script>
+<script src="/static/js/index.js"></script>
+</html>

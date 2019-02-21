@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>今日头条</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui">
+	<script src="/static/js/rem.js"></script>
+	<script src="/static/js/jQuery.js"></script>
+	<link rel="stylesheet" href="/static/css/login1.css">
+</head>
+<body>
+	<header>
+		<h3>登录你的头条，精彩永不丢失</h3>
+	</header>
+	<form action="/checklogin1" method="post">
+		<div class="box">
+			<input type="text" name="account" placeholder="请输入您的手机号">
+			<!--<h3>发送验证码</h3>-->
+		   <div class="form-group">
+				<div class="field">
+					<input type="text" class="input input-big" name="code" style="width:60%;float:left;margin-top:.4rem;" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码" />
+				   <img src="/static/admin/images/passcode.jpg"  alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer; float:right;margin-top:.4rem;" onclick="this.src=this.src+'?'">
+				</div>
+			</div>
+			<!--<div class="box1">进入头条</div>-->
+			<div  class="box1" style="margin-top: 1.9rem; background: #FAB4B4;"><input type="submit" style="background: #FAB4B4;color:white" class="button button-block bg-main text-big input-big" value="进入头条"></div>
+		</div>
+	</form>
+	<h4>点击查看<p>“用户协议”</p>和<p>“隐私政策”</p></h4>
+	<div class="run" style="width:3.2rem">
+		<a href="/openzhuce"><span>账号注册</span></a>
+		<div class="box3"></div>
+		<a href="/login1"><span>密码登录</span></a>
+	</div>
+</body>
+<script src="/static/js/rem.js"></script>
+</html>
